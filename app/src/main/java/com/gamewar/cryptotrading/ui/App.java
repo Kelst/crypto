@@ -20,7 +20,7 @@ public void onCreate() {
 @NonNull
 @Override
 public Class<?> getAppUiClassName() {
-    return MainActivity.class;
+    return StartActivity.class;
 }
 
 @Override
@@ -31,14 +31,11 @@ public int getIntroBgColor() {
 @NonNull
 @Override
 public List<IntroItem> getIntroItems() {
-    List<IntroItem> list = new ArrayList<>();
-    list.add(new IntroItem("Gifts unboxing", "Click on the box and win free gifts.", R.drawable.ic_search));
-    list.add(new IntroItem("Daily", "You have 5 attempts to open box everyday. Good luck!", R.drawable.ic_search));
-    return list;
+    return null;
 }
 
 @Override
 public boolean showIntro() {
-    return true;
+    return false;
 }
 }
