@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.detail.AddToWatchlistBottomSheetFragment"
+    android:padding="16dp"
+    android:background="@color/black">
+
+    <View
+        android:id="@+id/sheetController"
+        android:layout_width="61dp"
+        android:layout_height="3dp"
+        android:background="#991313EC"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvChooseWatchlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sheetController"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/white_alpha_70"
+        android:textSize="14sp"
+        tools:text="Choose watchlist to add bitcoin" />
+
+    <RadioGroup
+        android:id="@+id/rgWatchlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvChooseWatchlist"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/rbWatchlist1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Watchlist 1"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_semibold"
+            android:button="@null"
+            android:background="@drawable/radio_button_bg_selector"
+            android:paddingStart="16dp"/>
+
+        <RadioButton
+            android:id="@+id/rbWatchlist2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Watchlist 2"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_semibold"
+            android:button="@null"
+            android:background="@drawable/radio_button_bg_selector"
+            android:layout_marginTop="10dp"
+            android:paddingStart="16dp"/>
+
+        <RadioButton
+            android:id="@+id/rbWatchlist3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Watchlist 3"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_semibold"
+            android:button="@null"
+            android:background="@drawable/radio_button_bg_selector"
+            android:layout_marginTop="10dp"
+            android:paddingStart="16dp"/>
+
+        <RadioButton
+            android:id="@+id/rbWatchlist4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Watchlist 4"
+            android:textColor="@color/white"
+            android:elevation="5dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:button="@null"
+            android:background="@drawable/radio_button_bg_selector"
+            android:layout_marginTop="10dp"
+            android:paddingStart="16dp"/>
+        
+    </RadioGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddToWatchlist"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Add"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:cornerRadius="10dp"
+        android:backgroundTint="@color/blue_500"
+        android:layout_below="@id/rgWatchlist"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp" />
+
+</RelativeLayout>

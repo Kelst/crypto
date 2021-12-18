@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.detail.CurrencyDetailsFragment"
+    android:background="@color/black_bg"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/ivBackButton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_back_arrow"
+        app:tint="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/llCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/ivBackButton"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/ivCurrencyIcon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            tools:src="@drawable/ic_launcher_foreground"/>
+
+        <TextView
+            android:id="@+id/tvCurrencyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:fontFamily="@font/poppins_semibold"
+            tools:text="Bitcoin"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/ivAddToWatchlist"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_bookmark"
+        app:tint="@color/white"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:id="@+id/llCurrencyPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/llCurrency"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@id/cvPriceChange"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_marginEnd="7dp"/>
+
+        <TextView
+            android:id="@+id/tvCurrentPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="300000000000"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_bold"
+            android:maxLines="1"
+            android:maxLength="12"/>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvPriceChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/tabLayout"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <ImageView
+                android:id="@+id/ivChangeIcon"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                tools:src="@drawable/ic_trending_up"
+                tools:tint="@color/green"
+                android:layout_gravity="center"
+                android:layout_marginEnd="5dp"/>
+
+            <TextView
+                android:id="@+id/tvPercentChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="16.2%"
+                android:textSize="13sp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/green"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black_bg"
+        app:tabBackground="@drawable/tab_selector"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/white_alpha_50"
+        app:tabTextAppearance="@style/TabTextAppearance"
+        app:tabRippleColor="@null"
+        app:tabMode="fixed"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0dp"
+        android:layout_below="@id/llCurrencyPrice"
+        android:layout_marginTop="16dp"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/tabLayout"
+        android:overScrollMode="never" />
+
+    <TextView
+        android:id="@+id/tvMarketStats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewPager"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Market Stats"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvMarketStats"
+        android:orientation="vertical">
+        
+        <LinearLayout
+            android:id="@+id/llMarketCap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:text="Market Cap"
+                android:textColor="@color/white_alpha_60"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="start"/>
+
+            <TextView
+                android:id="@+id/tvMarketCap"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="1259073172790"
+                android:textColor="@color/white_alpha_85"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="end"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewBelowMarketCap"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#19FFFFFF"/>
+
+        <LinearLayout
+            android:id="@+id/llCirculatingSupply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:text="Circulating Supply"
+                android:textColor="@color/white_alpha_60"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="start"/>
+
+            <TextView
+                android:id="@+id/tvCirculatingSupply"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="18868475"
+                android:textColor="@color/white_alpha_85"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="end"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewBelowCirculatingSupply"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#19FFFFFF"/>
+
+        <LinearLayout
+            android:id="@+id/llMaxSupply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:text="Maximum Supply"
+                android:textColor="@color/white_alpha_60"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="start"/>
+
+            <TextView
+                android:id="@+id/tvMaxSupply"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="21000000"
+                android:textColor="@color/white_alpha_85"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="end"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewBelowMaxSupply"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#19FFFFFF"/>
+
+        <LinearLayout
+            android:id="@+id/llPriceChange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:text="Price Change (24h)"
+                android:textColor="@color/white_alpha_60"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="start"/>
+
+            <TextView
+                android:id="@+id/tvPriceChange"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="1226.26992027"
+                android:textColor="@color/white_alpha_85"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="end"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewBelowPriceChange"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#19FFFFFF"/>
+
+        <LinearLayout
+            android:id="@+id/llVolumeChange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:text="Volume Change (24h)"
+                android:textColor="@color/white_alpha_60"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="start"/>
+
+            <TextView
+                android:id="@+id/tvVolumeChange"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="-5686345977.35"
+                android:textColor="@color/white_alpha_85"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="end"/>
+
+        </LinearLayout>
+        
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/blue_200"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

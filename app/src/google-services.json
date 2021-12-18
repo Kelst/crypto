@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "782967781514",
+    "project_id": "cryp-totrading",
+    "storage_bucket": "cryp-totrading.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:782967781514:android:8b1ccb9235552d938f5573",
+        "android_client_info": {
+          "package_name": "com.gamewar.cryptotrading"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "782967781514-a9oj6qu93q7gsvou52db9agonmqur832.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqpWP-tP_7DnXgtKYkqca7kP-f9vm3yaU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "782967781514-a9oj6qu93q7gsvou52db9agonmqur832.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
