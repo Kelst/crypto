@@ -10,10 +10,10 @@ import com.gamewar.cryptotrading.R
 import com.gamewar.cryptotrading.databinding.ActivityMainBinding
 import com.traffappscorelib.wsc.StartActivity
 
-class MainActivity : StartActivity()  {
+class MainActivity : AppCompatActivity()  {
 
     private var binding: ActivityMainBinding? = null
-    override fun getLoadingViewLayoutRes() = R.layout.loadingg
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
