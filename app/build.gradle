@@ -13,7 +13,7 @@ android {
         applicationId "com.gamewar.cryptotrading"
         minSdk 23
         targetSdk 31
-        versionCode 1
+        versionCode 3
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -21,7 +21,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -100,6 +100,4 @@ dependencies {
 
     implementation 'com.github.shtefunyk:TrafficAppsCoreLib:1.0.3'
     implementation platform('com.google.firebase:firebase-bom:29.0.2')
-
-
 }
